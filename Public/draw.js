@@ -1,3 +1,7 @@
+const socket = io();
+
+// Resto do código de desenho...
+
 const canvas = document.getElementById('drawArea');
 const ctx = canvas.getContext('2d');
 let drawing = false;
