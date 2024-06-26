@@ -1,7 +1,6 @@
 const socket = io(); // Certifique-se de declarar 'socket' apenas uma vez
 
-// O restante do seu código de desenho...
-
+// Variáveis globais
 const canvas = document.getElementById('drawArea');
 const ctx = canvas.getContext('2d');
 let drawing = false;
