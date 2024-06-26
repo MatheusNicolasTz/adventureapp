@@ -25,7 +25,10 @@ body {
     padding: 10px;
     margin-top: 20px;
 }
-
+.co {
+    background-color: #e5ff00;
+    color: #000000;
+}
 button, input[type="range"] {
     background-color: #2563eb;
     border: none;
