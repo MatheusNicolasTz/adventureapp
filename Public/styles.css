@@ -1,3 +1,71 @@
-canvas {
-    border: 1px solid black;
+/* Estilos Gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Container Principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 10px;
+}
+
+/* Canvas de Desenho */
+#drawArea {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+}
+
+/* Controles */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.controls button, .controls input {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.controls button:hover, .controls input:hover {
+    background: #f0f0f0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls button, .controls input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #drawArea {
+        height: 300px;
+    }
 }
