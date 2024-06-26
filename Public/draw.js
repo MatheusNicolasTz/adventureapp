@@ -1,7 +1,9 @@
+const socket = io('https://adventureapp.herokuapp.com');
+
+// Resto do código para desenho...
 const canvas = document.getElementById('drawArea');
 const ctx = canvas.getContext('2d');
 let drawing = false;
-const socket = io();
 let mode = 'brush'; // Pode ser 'brush', 'eraser' ou 'fill'
 let drawingHistory = [];
 

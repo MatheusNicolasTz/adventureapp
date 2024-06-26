@@ -1,31 +1,15 @@
 const express = require('express');
-const http = require('http');
-const socketIo = require('socket.io');
+const path = require('path');
 
 const app = express();
-const server = http.createServer(app);
-const io = socketIo(server);
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
-io.on('connection', (socket) => {
-    console.log('a user connected');
-    
-    socket.on('drawing', (data) => {
-        console.log('drawing data received:', data);
-        socket.broadcast.emit('drawing', data);
-    });
-
-    socket.on('fill', (data) => {
-        console.log('fill data received:', data);
-        socket.broadcast.emit('fill', data);
-    });
-
-    socket.on('disconnect', () => {
-        console.log('user disconnected');
-    });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-server.listen(3000, () => {
-    console.log('listening on *:3000');
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
