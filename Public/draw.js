@@ -199,6 +199,6 @@ function hexToRgb(hex) {
 function saveDrawing() {
     const link = document.createElement('a');
     link.href = canvas.toDataURL('image/png');
-    link.download = 'desenho.png';
+    link.download = 'sketch.png';
     link.click();
 }
