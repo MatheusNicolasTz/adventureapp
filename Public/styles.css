@@ -1,50 +1,88 @@
-/* Estilos Gerais */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    margin: 0;
+    background-color: #1f2937;
 }
 
-/* Container Principal */
 .container {
-    width: 80%;
-    max-width: 1200px;
+    background-color: #1C4966;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: white;
-    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
 }
 
-/* Canvas de Desenho */
-#drawArea {
-    width: 100%;
-    height: 600px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: white;
-}
-
-/* Controles */
 .controls {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.controls button, .controls input {
-    margin: 5px;
+    align-items: center;
+    background-color: #111827;
+    border-radius: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #fff;
-    cursor: pointer;
-    transition: background 0.3s;
+    margin-top: 20px;
 }
 
-.controls button:hover, .controls input:hover {
-    background: #f0f0f0;
+button, input[type="range"] {
+    background-color: #2563eb;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    padding: 10px 30px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover, input[type="range"]:hover {
+    background-color: #1e40af;
+}
+
+button:focus, input[type="range"]:focus {
+    outline: none;
+}
+
+button:active, input[type="range"]:active {
+    background-color: #1d4ed8;
+}
+
+canvas {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
+}
+
+.color-wrapper {
+    position: relative;
+}
+
+.color-preview {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #000000;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#colorPicker {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    flex: 1;
 }

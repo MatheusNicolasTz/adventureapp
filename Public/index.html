@@ -8,15 +8,19 @@
 </head>
 <body>
     <div class="container">
+        <canvas id="drawArea"></canvas>
         <div class="controls">
             <button onclick="clearCanvas()">Clear</button>
             <button onclick="toggleBrush()">Brush</button>
-            <button onclick="toggleEraser()">Eraser</button>
+            <button onclick="toggleEraser()">Rubber</button>
             <button onclick="toggleFill()">Fill</button>
-            <input type="color" id="colorPicker" value="#000000">
+            <div class="color-wrapper">
+                <div class="color-preview" id="colorPreview" onclick="document.getElementById('colorPicker').click()"></div>
+                <input type="color" id="colorPicker" value="#000000" onchange="updateColorPreview(this.value)">
+            </div>
             <input type="range" id="brushSize" min="1" max="10" value="5">
+            <button onclick="saveDrawing()">Salvar</button>
         </div>
-        <canvas id="drawArea"></canvas>
     </div>
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
     <script src="draw.js"></script>
