@@ -11,7 +11,7 @@ body {
 
 /* Container Principal */
 .container {
-    width: 100%;
+    width: 80%;
     max-width: 1200px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -22,7 +22,7 @@ body {
 /* Canvas de Desenho */
 #drawArea {
     width: 100%;
-    height: auto;
+    height: 600px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background: white;
@@ -32,7 +32,6 @@ body {
 .controls {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     margin-bottom: 10px;
 }
 
@@ -48,24 +47,4 @@ body {
 
 .controls button:hover, .controls input:hover {
     background: #f0f0f0;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-
-    .controls {
-        flex-direction: column;
-    }
-
-    .controls button, .controls input {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    #drawArea {
-        height: 300px;
-    }
 }
